@@ -9,3 +9,7 @@ colorscheme mrkn256 "カラースキーマを設定
 set transparency=20 " initialize
 nnoremap <expr><F12> &transparency+20 >= 100 ? ":set transparency=20\<CR>" : ":let &transparency=&transparency+20\<CR>"
 
+if has('mac')
+    autocmd BufEnter * macaction performZoom:
+endif
+
