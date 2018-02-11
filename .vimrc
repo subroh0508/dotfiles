@@ -61,6 +61,8 @@ set guifont=Myrica\ M:h18
 highlight cursorline term=none cterm=none ctermfg=none ctermbg=black
 highlight Normal ctermbg=none
 
+set clipboard=unnamed,autoselect
+
 "#####閉じ括弧#####
 inoremap { {}<LEFT>
 inoremap [ []<LEFT>
