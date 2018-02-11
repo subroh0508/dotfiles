@@ -1,0 +1,19 @@
+[user]
+	name = subroh0508
+	email = subroh.0508@gmail.com
+[color]
+	ui = auto
+[alias]
+	co = checkout
+[core]
+	editor = vim
+	autocrlf = input
+	excludesfile = /Users/subroh_0508/.gitignore_global
+[difftool "sourcetree"]
+	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/subroh_0508/.stCommitMsg
