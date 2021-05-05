@@ -42,9 +42,6 @@ yay -S google-chrome firefox
 
 # Install input methods
 yay -S fcitx fcitx-mozc fcitx-im fcitx-configtool
-echo "export GTK_IM_MODULE=fcitx" > ~/.xprofile
-echo "export QT_IM_MODULE=fcitx" >> ~/.xprofile
-echo "export XMODIFIERS=@im=fcitx" >> ~/.xprofile
 
 # Install fonts
 yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
@@ -52,4 +49,6 @@ yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
 # Install OpenSSH and Generate keys
 yay -S openssh xclip
 $HOME/dotfiles/common/ssh-generate.sh
+ssh-agent
+ssh-add $HOME/.ssh/id_rsa
 
