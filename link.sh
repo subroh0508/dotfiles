@@ -25,4 +25,5 @@ ln -s "$SCRIPT_DIR/.ssh/config" "$HOME/.ssh/config"
 
 if [ $ENV == "arch" ]; then
     ln -s "$SCRIPT_DIR/desktop/xfce4/terminal" "$HOME/.config/xfce4/terminal"
+    ln -s "$SCRIPT_DIR/desktop/xfce4/xfconf/xfce-perchannel-xml/keyboards.xml" "$HOME/.config/xfce4/xfconf/xfce-perchannel-xml/keyboards.xml"
 fi
