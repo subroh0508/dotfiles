@@ -7,7 +7,10 @@ do
     [[ "$f" == ".git" ]] && continue
     [[ "$f" == ".config" ]] && continue
     [[ "$f" == ".DS_Store" ]] && continue
+    [[ "$f" == ".ssh" ]] && continue
     ln -s "$SCRIPT_DIR/$f" "$HOME/$f"
     echo "$f"
 done
+
+ln -s "$SCRIPT_DIR/.ssh/config" "$HOME/.ssh/config"
 
