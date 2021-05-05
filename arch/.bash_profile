@@ -1,4 +1,5 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-ssh-agent
+# For automate ssh passphrase
+eval $(ssh-agent)
 
