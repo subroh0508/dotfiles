@@ -49,6 +49,6 @@ yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
 # Install OpenSSH and Generate keys
 yay -S openssh xclip
 $HOME/dotfiles/common/ssh-generate.sh
-ssh-agent
+eval $(ssh-agent)
 ssh-add $HOME/.ssh/id_rsa
 
