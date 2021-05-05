@@ -19,8 +19,10 @@ do
     [[ "$f" == ".gitignore" ]] && continue
     [[ "$f" == ".gitmodules" ]] && continue
     ln -s "$SCRIPT_DIR/$ENV/$f" "$HOME/$f"
-    echo "$f"
 done
 
 ln -s "$SCRIPT_DIR/.ssh/config" "$HOME/.ssh/config"
 
+if [ $ENV == "arch" ]; then
+    ln -s "$SCRIPT_DIR/desktop/xfce4/terminal" "$HOME/.config/xfce4/terminal"
+fi
