@@ -1,3 +1,7 @@
+#!/bin/bash
+
+cd $HOME/
+
 # Install yay
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -42,13 +46,10 @@ echo "export GTK_IM_MODULE=fcitx" > ~/.xprofile
 echo "export QT_IM_MODULE=fcitx" >> ~/.xprofile
 echo "export XMODIFIERS=@im=fcitx" >> ~/.xprofile
 
-# Install OpenSSH and generate keys
-yay -S openssh
-# mkdir ~/.ssh
-# cd ~/.ssh
-# ssh-keygen -t rsa -b 4096 -C "in-the-n@me-of.love"
-# cd ~/
-
 # Install fonts
 yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
+
+# Install OpenSSH and Generate keys
+yay -S openssh
+$HOME/dotfiles/common/ssh-generate.sh
 

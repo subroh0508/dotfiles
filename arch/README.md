@@ -11,9 +11,17 @@ rm -rf dotfiles
 
 # After logout -> login as added user
 git clone https://github.com/subroh0508/dotfiles.git
-sudo chomod +x dotfiles/arch/*
+sudo chmode +x dotfiles/arch/*
 cd dotfiles/arch
 bash install.sh
-cd ..
+cd ../../
 rm -rf dotfiles
-```
+
+# Register public key to GitHub
+cat ~/.ssh/id_rsa.pub | xclip -selection c
+
+git clone --recursive git@github.com:subroh0508/dotfiles.git
+find dotfiles/ -name "*.sh" | xarg sudo chomod +x
+cd dotfiles
+bash link.sh
+
