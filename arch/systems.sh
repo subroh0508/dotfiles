@@ -50,6 +50,6 @@ echo "export XMODIFIERS=@im=fcitx" >> ~/.xprofile
 yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
 
 # Install OpenSSH and Generate keys
-yay -S openssh
+yay -S openssh xclip
 $HOME/dotfiles/common/ssh-generate.sh
 
