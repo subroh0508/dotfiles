@@ -1,3 +1,10 @@
+USER_NAME=$1
+USER_PASSWD=$2
+
+# Add user
+useradd -m -g wheel ${USER_NAME}
+echo "${USER_PASSWD}\n${USER_PASSWD}\n" | passwd ${USER_NAME}
+
 # Install git
 pacman -S git
 
@@ -31,9 +38,7 @@ yay -S networkmanager network-manager-applet xfce4-notifyd
 
 systemctl start NetworkManager
 systemctl enable NetworkManager
-systemctl disable systemd-networkd
-systemctl disable systemd-resolved
-rm -rf /etc/systemd/network/20-wired.network
+systemctl disable dhcpd
 
 # Install sound driver
 yay -S pulseaudio pavucontrol
