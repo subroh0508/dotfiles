@@ -8,6 +8,8 @@ do
     [[ "$f" == ".config" ]] && continue
     [[ "$f" == ".DS_Store" ]] && continue
     [[ "$f" == ".ssh" ]] && continue
+    [[ "$f" == ".gitignore" ]] && continue
+    [[ "$f" == ".gitmodules" ]] && continue
     ln -s "$SCRIPT_DIR/$f" "$HOME/$f"
     echo "$f"
 done
