@@ -1,4 +1,5 @@
 ```sh
+# With bootable disk
 curl -L https://gist.github.com/subroh0508/00d19791fe9b3114e8d4047e8534e42c | bash
 
 # After reboot
