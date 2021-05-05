@@ -46,6 +46,16 @@ yay -S fcitx fcitx-mozc fcitx-im fcitx-configtool
 # Install fonts
 yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
 
+yay -S p7zip
+curl -OL https://github.com/tomokuni/Myrica/raw/master/product/Myrica.7z
+curl -OL https://github.com/tomokuni/Myrica/raw/master/product/MyricaM.7z
+7z x -oMyrica Myrica.7z
+7z x -oMyricaM MyricaM.7z
+sudo mkdir /usr/share/fonts/myrica
+sudo cp Myrica/Myrica.TTC /usr/share/fonts/myrica/Myrica.TTC
+sudo cp MyricaM/MyricaM.TTC /usr/share/fonts/myrica/MyricaM.TTC
+fc-cache -vf
+
 # Install OpenSSH and Generate keys
 yay -S openssh xclip
 $HOME/dotfiles/common/ssh-generate.sh
