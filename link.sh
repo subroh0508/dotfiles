@@ -1,9 +1,15 @@
 #!/bin/bash
 
+if [ $# != 1 ]; then
+	echo "Tell me environment"
+	echo "For example, 'arch', 'macos' and so on."
+	exit 1
+fi
+
 SCRIPT_DIR=$(cd $(dirname $0); pwd)
 ENV=$1
 
-cd $HOME/dotfiles
+cd $HOME/dotfiles/$ENV
 for f in .??*
 do
     [[ "$f" == ".git" ]] && continue

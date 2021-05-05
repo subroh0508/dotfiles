@@ -1,4 +1,4 @@
 #!/bin/bash
 
-$HOME/dotfiles/common/alias.sh
+. $HOME/dotfiles/common/alias.bash
 
