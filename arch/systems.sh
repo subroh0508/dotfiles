@@ -19,6 +19,8 @@ yay -S xorg-server xterm
 # Install video driver for Intel
 # lspci | grep -e VGA -e 3D
 # yay -S xf86-video-intel
+# sudo echo "options i915 enable_guc=2" >/etc/modprobe.d/i915.conf
+# sudo mkinitcpio -P
 
 # Install display manager
 yay -S lightdm lightdm-gtk-greeter
