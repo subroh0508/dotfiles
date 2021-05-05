@@ -1,13 +1,3 @@
-USER_NAME=$1
-USER_PASSWD=$2
-
-# Add user
-useradd -m -g wheel ${USER_NAME}
-echo "${USER_PASSWD}\n${USER_PASSWD}\n" | passwd ${USER_NAME}
-
-# Install git
-pacman -S git
-
 # Install yay
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -58,4 +48,7 @@ yay -S openssh
 # cd ~/.ssh
 # ssh-keygen -t rsa -b 4096 -C "in-the-n@me-of.love"
 # cd ~/
+
+# Install fonts
+yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
 
